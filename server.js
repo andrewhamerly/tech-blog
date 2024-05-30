@@ -21,8 +21,6 @@ app.use(session({
     saveUninitialized: true,
 }));
 
-sequelize.sync({ alter: true });
-
 app.use('/', authRoutes);
 app.use('/posts', postRoutes);
 app.use('/users', userRoutes);
